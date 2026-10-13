@@ -54,7 +54,7 @@ $ ls ./projects
 
 | Project | Latest | Shipped | What it is |
 | :-- | :-- | :-- | :-- |
-| [`darkroom`](https://github.com/aself101/darkroom) | `public` | - | Local studio for image and video generation |
+| [`darkroom`](https://github.com/aself101/darkroom) | `-` | - | Local studio for image and video generation |
 <!-- PACKAGES:END -->
 
 ```console
