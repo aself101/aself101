@@ -1,0 +1,111 @@
+{
+  "groups": [
+    { "id": "apps", "cmd": "ls ./apps" },
+    { "id": "packages", "cmd": "ls ./packages" },
+    { "id": "projects", "cmd": "ls ./projects" }
+  ],
+  "packages": [
+    {
+      "group": "apps",
+      "label": "UluOps Registry",
+      "url": "https://registry.uluops.ai",
+      "static": "live",
+      "desc": "Versioned YAML definitions for agents",
+      "profiles": ["personal", "uluops"]
+    },
+    {
+      "group": "apps",
+      "label": "UluOps Tracker",
+      "url": "https://app.uluops.ai",
+      "static": "live",
+      "desc": "Longitudinal eval framework: track how agents perform over time",
+      "profiles": ["personal", "uluops"]
+    },
+
+    {
+      "group": "packages",
+      "label": "@uluops/core",
+      "npm": "@uluops/core",
+      "desc": "Execution engine: agents, commands, workflows and pipelines",
+      "profiles": ["personal", "uluops"]
+    },
+    {
+      "group": "packages",
+      "label": "@uluops/cli",
+      "npm": "@uluops/cli",
+      "desc": "`ulu`: runs, findings, issues and the registry from one command",
+      "profiles": ["personal", "uluops"]
+    },
+    {
+      "group": "packages",
+      "label": "@uluops/ops-sdk",
+      "npm": "@uluops/ops-sdk",
+      "desc": "Typed TypeScript client for the tracker API",
+      "profiles": ["personal", "uluops"]
+    },
+    {
+      "group": "packages",
+      "label": "@uluops/ops-mcp",
+      "npm": "@uluops/ops-mcp",
+      "desc": "MCP server for the tracker: runs, findings, issues, analytics",
+      "profiles": ["personal", "uluops"]
+    },
+    {
+      "group": "packages",
+      "label": "@uluops/registry-sdk",
+      "npm": "@uluops/registry-sdk",
+      "desc": "SDK for the Registry API",
+      "profiles": ["personal", "uluops"]
+    },
+    {
+      "group": "packages",
+      "label": "@uluops/registry-mcp",
+      "npm": "@uluops/registry-mcp",
+      "desc": "MCP server for the Registry: definitions, versions, analytics",
+      "profiles": ["personal", "uluops"]
+    },
+    {
+      "group": "packages",
+      "label": "@uluops/sdk-core",
+      "npm": "@uluops/sdk-core",
+      "desc": "Shared infrastructure for the UluOps SDKs",
+      "profiles": ["personal", "uluops"]
+    },
+    {
+      "group": "packages",
+      "label": "@uluops/setup",
+      "npm": "@uluops/setup",
+      "desc": "Installer for UluOps agentic harnesses",
+      "profiles": ["personal", "uluops"]
+    },
+    {
+      "group": "packages",
+      "label": "@uluops/taxonomy",
+      "npm": "@uluops/taxonomy",
+      "desc": "The UluOps failure taxonomy: 4 domains, 28 modes, 5 severities",
+      "profiles": ["personal", "uluops"]
+    },
+    {
+      "group": "packages",
+      "label": "@uluops/agent-metrics",
+      "npm": "@uluops/agent-metrics",
+      "desc": "Metrics from Claude Code and Codex session files",
+      "profiles": ["personal", "uluops"]
+    },
+    {
+      "group": "packages",
+      "label": "mcp-secure-server",
+      "npm": "mcp-secure-server",
+      "desc": "Secure-by-default MCP server with 5-layer validation",
+      "profiles": ["personal", "uluops"]
+    },
+
+    {
+      "group": "projects",
+      "label": "darkroom",
+      "repo": "aself101/darkroom",
+      "desc": "Local studio for image and video generation",
+      "profiles": ["personal"]
+    }
+  ]
+}
