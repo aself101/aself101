@@ -5,6 +5,8 @@
 //   PROFILE      which entries to list ("personal" or "uluops"); default "personal"
 //   README_PATH  file to update; default "README.md"
 //   CONFIG       entry list; default "packages.json"
+//   STYLE        "console" (terminal prompts, default) or "index" (numbered rows
+//                under plain headings, for the Swiss README)
 //   GITHUB_TOKEN optional, raises the GitHub API rate limit
 //
 // Blocks it owns (everything between the markers is overwritten):
@@ -20,14 +22,22 @@
 //   repo     "owner/name": used for GitHub release / last-push when there is no npm data
 //   url      link target; defaults to the npm page, then the GitHub repo
 //   static   fixed text for the Latest column (e.g. "live" for a hosted app)
+//
+// Group fields: id, cmd (console style heading), title (index style heading,
+// defaults to the capitalised id).
 
 import { readFileSync, writeFileSync } from 'node:fs';
 
 const PROFILE = process.env.PROFILE ?? 'personal';
 const README = process.env.README_PATH ?? 'README.md';
 const CONFIG = process.env.CONFIG ?? 'packages.json';
+const STYLE = process.env.STYLE ?? 'console';
 const TOKEN = process.env.GITHUB_TOKEN;
 const RECENT_SHIPS = 5;
+
+if (STYLE !== 'console' && STYLE !== 'index') {
+  throw new Error(`Unknown STYLE "${STYLE}" (use "console" or "index")`);
+}
 
 const ghHeaders = {
   Accept: 'application/vnd.github+json',
@@ -64,6 +74,8 @@ async function lookup(entry) {
 }
 
 const day = (iso) => (iso ? iso.slice(0, 10) : '-');
+const pad2 = (n) => String(n).padStart(2, '0');
+const capitalise = (s) => s.charAt(0).toUpperCase() + s.slice(1);
 
 const linkFor = (entry) =>
   entry.url ??
@@ -84,22 +96,39 @@ const rows = await Promise.all(
   entries.map(async (entry) => ({ entry, ...(await lookup(entry)) })),
 );
 
+let counter = 0; // index style numbers rows continuously across groups
+
+function renderGroup(group, inGroup) {
+  if (STYLE === 'index') {
+    return [
+      `### ${group.title ?? capitalise(group.id)}`,
+      '',
+      '| # | Project | Latest | Shipped | What it is |',
+      '| :-- | :-- | :-- | :-- | :-- |',
+      ...inGroup.map(
+        ({ entry, version, shipped }) =>
+          `| ${pad2(++counter)} | [**${entry.label}** ↗](${linkFor(entry)}) | \`${version}\` | ${day(shipped)} | ${entry.desc} |`,
+      ),
+    ].join('\n');
+  }
+  return [
+    '```console',
+    `$ ${group.cmd}`,
+    '```',
+    '',
+    '| Project | Latest | Shipped | What it is |',
+    '| :-- | :-- | :-- | :-- |',
+    ...inGroup.map(
+      ({ entry, version, shipped }) =>
+        `| [\`${entry.label}\`](${linkFor(entry)}) | \`${version}\` | ${day(shipped)} | ${entry.desc} |`,
+    ),
+  ].join('\n');
+}
+
 const tables = groups
   .map((group) => {
     const inGroup = rows.filter((r) => (r.entry.group ?? groups[0].id) === group.id);
-    if (!inGroup.length) return null;
-    return [
-      '```console',
-      `$ ${group.cmd}`,
-      '```',
-      '',
-      '| Project | Latest | Shipped | What it is |',
-      '| :-- | :-- | :-- | :-- |',
-      ...inGroup.map(
-        ({ entry, version, shipped }) =>
-          `| [\`${entry.label}\`](${linkFor(entry)}) | \`${version}\` | ${day(shipped)} | ${entry.desc} |`,
-      ),
-    ].join('\n');
+    return inGroup.length ? renderGroup(group, inGroup) : null;
   })
   .filter(Boolean)
   .join('\n\n');
@@ -111,24 +140,25 @@ const recent = rows
 
 const labelWidth = Math.max(0, ...recent.map((r) => r.entry.label.length)) + 2;
 const versionWidth = Math.max(0, ...recent.map((r) => r.version.length)) + 2;
-const shippedBlock = [
-  '```console',
-  '$ ./last-shipped',
-  ...(recent.length
-    ? recent.map(
-        (r) => `${r.entry.label.padEnd(labelWidth)}${r.version.padEnd(versionWidth)}${day(r.shipped)}`,
-      )
-    : ['nothing shipped yet']),
-  '```',
-].join('\n');
+const shippedLines = recent.length
+  ? recent.map(
+      (r) => `${r.entry.label.padEnd(labelWidth)}${r.version.padEnd(versionWidth)}${day(r.shipped)}`,
+    )
+  : ['nothing shipped yet'];
+
+// Index style: the README supplies the "Last shipped" heading, so no prompt line here.
+const shippedBlock =
+  STYLE === 'index'
+    ? ['```text', ...shippedLines, '```'].join('\n')
+    : ['```console', '$ ./last-shipped', ...shippedLines, '```'].join('\n');
 
 const original = readFileSync(README, 'utf8');
 let next = replaceBlock(original, 'PACKAGES', tables);
 next = replaceBlock(next, 'SHIPPED', shippedBlock);
 
 if (next === original) {
-  console.log(`${README}: already up to date (${PROFILE})`);
+  console.log(`${README}: already up to date (${PROFILE}, ${STYLE})`);
 } else {
   writeFileSync(README, next);
-  console.log(`${README}: updated (${PROFILE}, ${rows.length} entries)`);
+  console.log(`${README}: updated (${PROFILE}, ${STYLE}, ${rows.length} entries)`);
 }
