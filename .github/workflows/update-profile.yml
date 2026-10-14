@@ -27,6 +27,7 @@ concurrency:
 env:
   PROFILE: personal
   README_PATH: README.md
+  STYLE: index
 
 jobs:
   update:
