@@ -65,11 +65,11 @@ $ cat now.txt
 
 ```console
 $ cat stack.txt
-TypeScript · Node.js · MCP · YAML
+TypeScript · Node.js · Python · MCP · YAML · DBs
 ```
 
 ```console
 $ ./contact
 ```
 
-[**alexself.dev**](https://alexself.dev) · [email](mailto:your@email.here) · [LinkedIn](https://www.linkedin.com/in/your-handle)
+[**alexself.dev**](https://alexself.dev) · [email](mailto:aself@ululabs.ai) · [LinkedIn](https://www.linkedin.com/in/alexander-self)
