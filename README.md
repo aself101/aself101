@@ -49,7 +49,7 @@ mcp-secure-server  0.1.0-security  2026-10-14
 
 | # | Project | Latest | Shipped | What it is |
 | :-- | :-- | :-- | :-- | :-- |
-| 14 | [**darkroom** ↗](https://github.com/aself101/darkroom) | `public` | - | Local studio for image and video generation |
+| 14 | [**darkroom** ↗](https://github.com/aself101/darkroom) | `main` | 2026-09-24 | Local studio for image and video generation |
 <!-- PACKAGES:END -->
 
 ## Now
