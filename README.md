@@ -12,11 +12,11 @@ them. Before that: agricultural software, astronomy, political science.
 <!-- SHIPPED:START -->
 ```console
 $ ./last-shipped
-mcp-secure-server  0.0.27-security  2026-10-13
-@uluops/cli        0.39.0           2026-10-10
-@uluops/ops-mcp    0.31.0           2026-10-10
-@uluops/ops-sdk    6.17.0           2026-10-10
-@uluops/setup      0.16.0           2026-10-09
+mcp-secure-server  0.1.0-security  2026-10-14
+@uluops/cli        0.39.0          2026-10-10
+@uluops/ops-mcp    0.31.0          2026-10-10
+@uluops/ops-sdk    6.17.0          2026-10-10
+@uluops/setup      0.16.0          2026-10-09
 ```
 <!-- SHIPPED:END -->
 
@@ -46,7 +46,7 @@ $ ls ./packages
 | [`@uluops/setup`](https://www.npmjs.com/package/@uluops/setup) | `0.16.0` | 2026-10-09 | Installer for UluOps agentic harnesses |
 | [`@uluops/taxonomy`](https://www.npmjs.com/package/@uluops/taxonomy) | `1.1.0` | 2026-08-22 | The UluOps failure taxonomy: 4 domains, 28 modes, 5 severities |
 | [`@uluops/agent-metrics`](https://www.npmjs.com/package/@uluops/agent-metrics) | `0.12.0` | 2026-10-04 | Metrics from Claude Code and Codex session files |
-| [`mcp-secure-server`](https://www.npmjs.com/package/mcp-secure-server) | `0.0.27-security` | 2026-10-13 | Secure-by-default MCP server with 5-layer validation |
+| [`mcp-secure-server`](https://www.npmjs.com/package/mcp-secure-server) | `0.1.0-security` | 2026-10-14 | Secure-by-default MCP server with 5-layer validation |
 
 ```console
 $ ls ./projects
