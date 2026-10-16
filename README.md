@@ -11,11 +11,11 @@
 
 <!-- SHIPPED:START -->
 ```text
+@uluops/core          0.51.1          2026-10-16
 @uluops/cli           0.39.1          2026-10-16
 @uluops/registry-mcp  0.16.0          2026-10-16
 @uluops/registry-sdk  0.62.0          2026-10-16
 mcp-secure-server     0.1.0-security  2026-10-14
-@uluops/ops-mcp       0.31.0          2026-10-10
 ```
 <!-- SHIPPED:END -->
 
@@ -33,7 +33,7 @@ mcp-secure-server     0.1.0-security  2026-10-14
 
 | # | Project | Latest | Shipped | What it is |
 | :-- | :-- | :-- | :-- | :-- |
-| 03 | [**@uluops/core** ↗](https://www.npmjs.com/package/@uluops/core) | `0.51.0` | 2026-10-09 | Execution engine: agents, commands, workflows and pipelines |
+| 03 | [**@uluops/core** ↗](https://www.npmjs.com/package/@uluops/core) | `0.51.1` | 2026-10-16 | Execution engine: agents, commands, workflows and pipelines |
 | 04 | [**@uluops/cli** ↗](https://www.npmjs.com/package/@uluops/cli) | `0.39.1` | 2026-10-16 | `ulu`: runs, findings, issues and the registry from one command |
 | 05 | [**@uluops/ops-sdk** ↗](https://www.npmjs.com/package/@uluops/ops-sdk) | `6.17.0` | 2026-10-10 | Typed TypeScript client for the tracker API |
 | 06 | [**@uluops/ops-mcp** ↗](https://www.npmjs.com/package/@uluops/ops-mcp) | `0.31.0` | 2026-10-10 | MCP server for the tracker: runs, findings, issues, analytics |
