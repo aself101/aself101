@@ -11,11 +11,11 @@
 
 <!-- SHIPPED:START -->
 ```text
+@uluops/core           0.52.0  2026-10-25
+@uluops/registry-sdk   0.64.0  2026-10-25
+@uluops/ops-sdk        7.0.0   2026-10-24
 @uluops/cli            0.39.3  2026-10-19
-@uluops/core           0.51.2  2026-10-19
 @uluops/agent-metrics  0.12.1  2026-10-19
-@uluops/registry-mcp   0.16.0  2026-10-16
-@uluops/registry-sdk   0.62.0  2026-10-16
 ```
 <!-- SHIPPED:END -->
 
@@ -33,11 +33,11 @@
 
 | # | Project | Latest | Shipped | What it is |
 | :-- | :-- | :-- | :-- | :-- |
-| 03 | [**@uluops/core** ↗](https://www.npmjs.com/package/@uluops/core) | `0.51.2` | 2026-10-19 | Execution engine: agents, commands, workflows and pipelines |
+| 03 | [**@uluops/core** ↗](https://www.npmjs.com/package/@uluops/core) | `0.52.0` | 2026-10-25 | Execution engine: agents, commands, workflows and pipelines |
 | 04 | [**@uluops/cli** ↗](https://www.npmjs.com/package/@uluops/cli) | `0.39.3` | 2026-10-19 | `ulu`: runs, findings, issues and the registry from one command |
-| 05 | [**@uluops/ops-sdk** ↗](https://www.npmjs.com/package/@uluops/ops-sdk) | `6.17.0` | 2026-10-10 | Typed TypeScript client for the tracker API |
+| 05 | [**@uluops/ops-sdk** ↗](https://www.npmjs.com/package/@uluops/ops-sdk) | `7.0.0` | 2026-10-24 | Typed TypeScript client for the tracker API |
 | 06 | [**@uluops/ops-mcp** ↗](https://www.npmjs.com/package/@uluops/ops-mcp) | `0.31.0` | 2026-10-10 | MCP server for the tracker: runs, findings, issues, analytics |
-| 07 | [**@uluops/registry-sdk** ↗](https://www.npmjs.com/package/@uluops/registry-sdk) | `0.62.0` | 2026-10-16 | SDK for the Registry API |
+| 07 | [**@uluops/registry-sdk** ↗](https://www.npmjs.com/package/@uluops/registry-sdk) | `0.64.0` | 2026-10-25 | SDK for the Registry API |
 | 08 | [**@uluops/registry-mcp** ↗](https://www.npmjs.com/package/@uluops/registry-mcp) | `0.16.0` | 2026-10-16 | MCP server for the Registry: definitions, versions, analytics |
 | 09 | [**@uluops/sdk-core** ↗](https://www.npmjs.com/package/@uluops/sdk-core) | `0.19.0` | 2026-10-03 | Shared infrastructure for the UluOps SDKs |
 | 10 | [**@uluops/setup** ↗](https://www.npmjs.com/package/@uluops/setup) | `0.16.0` | 2026-10-09 | Installer for UluOps agentic harnesses |
