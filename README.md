@@ -11,9 +11,9 @@
 
 <!-- SHIPPED:START -->
 ```text
+@uluops/cli           0.42.0  2026-10-27
 @uluops/core          0.54.0  2026-10-27
 @uluops/setup         0.19.0  2026-10-25
-@uluops/cli           0.41.0  2026-10-25
 @uluops/registry-mcp  0.18.0  2026-10-25
 @uluops/ops-mcp       0.34.0  2026-10-25
 ```
@@ -34,7 +34,7 @@
 | # | Project | Latest | Shipped | What it is |
 | :-- | :-- | :-- | :-- | :-- |
 | 03 | [**@uluops/core** ↗](https://www.npmjs.com/package/@uluops/core) | `0.54.0` | 2026-10-27 | Execution engine: agents, commands, workflows and pipelines |
-| 04 | [**@uluops/cli** ↗](https://www.npmjs.com/package/@uluops/cli) | `0.41.0` | 2026-10-25 | `ulu`: runs, findings, issues and the registry from one command |
+| 04 | [**@uluops/cli** ↗](https://www.npmjs.com/package/@uluops/cli) | `0.42.0` | 2026-10-27 | `ulu`: runs, findings, issues and the registry from one command |
 | 05 | [**@uluops/ops-sdk** ↗](https://www.npmjs.com/package/@uluops/ops-sdk) | `7.1.0` | 2026-10-25 | Typed TypeScript client for the tracker API |
 | 06 | [**@uluops/ops-mcp** ↗](https://www.npmjs.com/package/@uluops/ops-mcp) | `0.34.0` | 2026-10-25 | MCP server for the tracker: runs, findings, issues, analytics |
 | 07 | [**@uluops/registry-sdk** ↗](https://www.npmjs.com/package/@uluops/registry-sdk) | `0.64.1` | 2026-10-25 | SDK for the Registry API |
