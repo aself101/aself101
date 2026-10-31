@@ -11,9 +11,9 @@
 
 <!-- SHIPPED:START -->
 ```text
+@uluops/setup         0.20.0  2026-10-30
 @uluops/cli           0.42.0  2026-10-27
 @uluops/core          0.54.0  2026-10-27
-@uluops/setup         0.19.0  2026-10-25
 @uluops/registry-mcp  0.18.0  2026-10-25
 @uluops/ops-mcp       0.34.0  2026-10-25
 ```
@@ -40,7 +40,7 @@
 | 07 | [**@uluops/registry-sdk** ↗](https://www.npmjs.com/package/@uluops/registry-sdk) | `0.64.1` | 2026-10-25 | SDK for the Registry API |
 | 08 | [**@uluops/registry-mcp** ↗](https://www.npmjs.com/package/@uluops/registry-mcp) | `0.18.0` | 2026-10-25 | MCP server for the Registry: definitions, versions, analytics |
 | 09 | [**@uluops/sdk-core** ↗](https://www.npmjs.com/package/@uluops/sdk-core) | `0.19.0` | 2026-10-03 | Shared infrastructure for the UluOps SDKs |
-| 10 | [**@uluops/setup** ↗](https://www.npmjs.com/package/@uluops/setup) | `0.19.0` | 2026-10-25 | Installer for UluOps agentic harnesses |
+| 10 | [**@uluops/setup** ↗](https://www.npmjs.com/package/@uluops/setup) | `0.20.0` | 2026-10-30 | Installer for UluOps agentic harnesses |
 | 11 | [**@uluops/taxonomy** ↗](https://www.npmjs.com/package/@uluops/taxonomy) | `1.1.0` | 2026-08-22 | The UluOps failure taxonomy: 4 domains, 28 modes, 5 severities |
 | 12 | [**@uluops/agent-metrics** ↗](https://www.npmjs.com/package/@uluops/agent-metrics) | `0.12.1` | 2026-10-19 | Metrics from Claude Code and Codex session files |
 | 13 | [**mcp-secure-server** ↗](https://www.npmjs.com/package/mcp-secure-server) | `0.1.1-security` | 2026-10-25 | Secure-by-default MCP server with 5-layer validation |
