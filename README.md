@@ -11,11 +11,11 @@
 
 <!-- SHIPPED:START -->
 ```text
-@uluops/cli           0.44.0  2026-11-02
-@uluops/core          0.57.0  2026-11-02
-@uluops/setup         0.20.0  2026-10-30
-@uluops/registry-mcp  0.18.0  2026-10-25
-@uluops/ops-mcp       0.34.0  2026-10-25
+@uluops/ops-sdk  7.2.0   2026-11-03
+@uluops/ops-mcp  0.34.1  2026-11-03
+@uluops/cli      0.44.0  2026-11-02
+@uluops/core     0.57.0  2026-11-02
+@uluops/setup    0.20.0  2026-10-30
 ```
 <!-- SHIPPED:END -->
 
@@ -35,8 +35,8 @@
 | :-- | :-- | :-- | :-- | :-- |
 | 03 | [**@uluops/core** ↗](https://www.npmjs.com/package/@uluops/core) | `0.57.0` | 2026-11-02 | Execution engine: agents, commands, workflows and pipelines |
 | 04 | [**@uluops/cli** ↗](https://www.npmjs.com/package/@uluops/cli) | `0.44.0` | 2026-11-02 | `ulu`: runs, findings, issues and the registry from one command |
-| 05 | [**@uluops/ops-sdk** ↗](https://www.npmjs.com/package/@uluops/ops-sdk) | `7.1.0` | 2026-10-25 | Typed TypeScript client for the tracker API |
-| 06 | [**@uluops/ops-mcp** ↗](https://www.npmjs.com/package/@uluops/ops-mcp) | `0.34.0` | 2026-10-25 | MCP server for the tracker: runs, findings, issues, analytics |
+| 05 | [**@uluops/ops-sdk** ↗](https://www.npmjs.com/package/@uluops/ops-sdk) | `7.2.0` | 2026-11-03 | Typed TypeScript client for the tracker API |
+| 06 | [**@uluops/ops-mcp** ↗](https://www.npmjs.com/package/@uluops/ops-mcp) | `0.34.1` | 2026-11-03 | MCP server for the tracker: runs, findings, issues, analytics |
 | 07 | [**@uluops/registry-sdk** ↗](https://www.npmjs.com/package/@uluops/registry-sdk) | `0.64.1` | 2026-10-25 | SDK for the Registry API |
 | 08 | [**@uluops/registry-mcp** ↗](https://www.npmjs.com/package/@uluops/registry-mcp) | `0.18.0` | 2026-10-25 | MCP server for the Registry: definitions, versions, analytics |
 | 09 | [**@uluops/sdk-core** ↗](https://www.npmjs.com/package/@uluops/sdk-core) | `0.19.0` | 2026-10-03 | Shared infrastructure for the UluOps SDKs |
